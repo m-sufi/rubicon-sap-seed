@@ -1,14 +1,16 @@
-class ZCL_RUBICON_HELLO definition
-  public
-  final
-  create public .
+CLASS zcl_rubicon_hello DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC.
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+    METHODS get_message
+      RETURNING VALUE(rv_message) TYPE string.
 ENDCLASS.
 
-
-
-CLASS ZCL_RUBICON_HELLO IMPLEMENTATION.
+CLASS zcl_rubicon_hello IMPLEMENTATION.
+  METHOD get_message.
+    rv_message = 'Hello from Rubicon'.
+  ENDMETHOD.
 ENDCLASS.
+

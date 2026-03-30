@@ -1,4 +1,11 @@
-interface ZIF_RUBICON_RULE
-  public .
+INTERFACE zif_rubicon_rule
+  PUBLIC.
 
-endinterface.
+  METHODS evaluate
+    IMPORTING
+      iv_country TYPE string
+      iv_amount  TYPE i
+    RETURNING
+      VALUE(rv_result) TYPE string.
+
+ENDINTERFACE.
